@@ -942,6 +942,7 @@ button.align-with-inputs {
 .tag-image-container {
     float: left;
     margin-bottom: 20px;
+    margin-right: 1em;
 }
 
 .slider-container .slider-frame img, .slider-container .slider-frame video {
