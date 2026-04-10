@@ -20,7 +20,7 @@ textarea.materialize-textarea {
 }
 
 thead th {
-    position: sticky;
+    /*position: sticky;*/
     top: 74px;
     z-index: 1;
 }
@@ -2382,4 +2382,63 @@ div[data-datum-list-target] {
 
 .loaned {
     filter: grayscale(100%);
+}
+
+/* Responsive tables - horizontal scroll on mobile */
+.table-responsive-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 15px;
+}
+
+.table-responsive-wrapper table {
+    min-width: 100%;
+}
+
+/* Hide elements on small screens */
+@media only screen and (max-width: 600px) {
+    .hide-on-small-and-down {
+        display: none !important;
+    }
+}
+
+/* Hide elements on medium screens and below */
+@media only screen and (max-width: 992px) {
+    .hide-on-med-and-down {
+        display: none !important;
+    }
+}
+
+/* Additional mobile table optimizations */
+@media only screen and (max-width: 749px) {
+    .children-table td,
+    .items-table td {
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+
+    .children-table th,
+    .items-table th {
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+
+    /* Make first column (image) smaller on mobile */
+    .children-table td:first-child,
+    .items-table td:first-child {
+        width: 50px;
+        min-width: 50px;
+    }
+
+    .children-table td:first-child img,
+    .items-table td:first-child img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    /* Reduce action button spacing */
+    .table-actions a {
+        margin: 0 2px;
+        font-size: 16px;
+    }
 }
