@@ -701,6 +701,30 @@ input[type=text].filter-input, input[type=text]:focus:not([readonly]).filter-inp
     margin-bottom: 20px;
 }
 
+/* Responsive tabs - wrap to next line on mobile */
+@media only screen and (max-width: 749px) {
+    .tabs-block ul.nav-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+    }
+
+    .tabs-block li.tab {
+        display: flex;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .tabs-block li.tab a {
+        padding: 0;
+    }
+
+    .tabs-block li.tab.current {
+        border-bottom: 2px solid;
+    }
+}
+
 .panel {
     display: none;
 }
